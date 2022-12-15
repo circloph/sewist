@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: seven.winds.studio.StudioApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.992 s <<< FAILURE! - in seven.winds.studio.StudioApplicationTests
+checkGetUserById  Time elapsed: 0.168 s  <<< ERROR!
+org.hibernate.LazyInitializationException: could not initialize proxy [seven.winds.studio.model.User#1] - no Session
+	at seven.winds.studio.StudioApplicationTests.checkGetUserById(StudioApplicationTests.java:29)
+
