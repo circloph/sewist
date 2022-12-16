@@ -1,6 +1,5 @@
 package seven.winds.studio.controller;
 
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,13 +18,10 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @Operation(summary = "Get user by id", tags = "user")
     @GetMapping("/users/{id}")
     public UserResponseDto getUser(@PathVariable Long id) {
         return userService.getUser(id);
     }
-
-//    @Operation(summary = "Save user", tags = "user")
 
     @PostMapping("/users")
     public UserResponseDto saveUser(@RequestBody UserRequestDto user) {

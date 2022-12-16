@@ -2,11 +2,9 @@ package seven.winds.studio.model;
 
 
 import javax.persistence.*;
-import javax.transaction.Transactional;
 
 @Entity
 @Table(name = "users")
-//@Transactional
 @org.springframework.transaction.annotation.Transactional
 public class User {
 

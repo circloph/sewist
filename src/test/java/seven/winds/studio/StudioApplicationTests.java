@@ -21,9 +21,13 @@ class StudioApplicationTests {
 	void checkGetUserById() {
 		UserRequestDto requestDto = new UserRequestDto("seven", "winds", "studio", "sewist2022@mail.ru", "88005553535");
 		UserResponseDto responseSave = userService.saveUser(requestDto);
-		UserResponseDto responseGet = userService.getUser(1L);
+		UserResponseDto responseGet = userService.getUser(responseSave.getId());
 
 		Assertions.assertEquals(responseSave.getFirstName(), responseGet.getFirstName());
+		Assertions.assertEquals(responseSave.getLastName(), responseGet.getLastName());
+		Assertions.assertEquals(responseSave.getEmail(), responseGet.getEmail());
+		Assertions.assertEquals(responseSave.getPhone(), responseGet.getPhone());
+		Assertions.assertEquals(responseSave.getId(), responseGet.getId());
 	}
 
 }
